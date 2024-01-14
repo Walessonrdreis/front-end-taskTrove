@@ -1,16 +1,22 @@
 // src/Navbar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { NavbarContainer, NavbarList, NavbarItem, NavbarLink } from './Navbar.styles';
+import TaskManager from '../TaskManager/TaskManager';
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <NavbarContainer>
+     <NavbarList>
+            <NavbarItem><NavbarLink to="/">Home</NavbarLink></NavbarItem>
+            <NavbarItem><NavbarLink to="/task">Tarefas</NavbarLink></NavbarItem>
+            <NavbarItem><NavbarLink to="/newtaskform">Nova Tarefa</NavbarLink></NavbarItem>
+            <NavbarItem><NavbarLink to="/categorias">Categorias</NavbarLink></NavbarItem>
+            <NavbarItem><NavbarLink to="/contact">Contato</NavbarLink></NavbarItem>
+            <NavbarItem><NavbarLink to="/about">Sobre</NavbarLink></NavbarItem>
+            <NavbarItem><NavbarLink to="/settings">Configurações</NavbarLink></NavbarItem>
+          </NavbarList>
+    </NavbarContainer>
   );
 };
 

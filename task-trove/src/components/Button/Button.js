@@ -1,15 +1,13 @@
 import React from 'react';
 
-const Button = () => {
-  const handleClick = () => {
-    alert('Botão clicado!');
-  };
+function BotaoVoltar() {
+  function handleClick() {
+    window.history.back();
+  }
 
   return (
-    <button onClick={handleClick}>
-      Clique-me
-    </button>
+    <button type="submit" onClick={handleClick}>Voltar</button>
   );
-};
+}
 
-export default Button;
+export default BotaoVoltar;
